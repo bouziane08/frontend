@@ -1,5 +1,3 @@
 // next-intl.config.ts
-export default {
-  locales: ['ar', 'en', 'fr'],
-  defaultLocale: 'ar'
-};
+export const locales = ['ar', 'en', 'fr'] as const;
+export const defaultLocale = 'ar';

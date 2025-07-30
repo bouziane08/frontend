@@ -1,9 +1,23 @@
 // next.config.ts
-import type { NextConfig } from 'next';
-import withNextIntl from 'next-intl/plugin';
+import createIntlMiddleware from 'next-intl/middleware';
 
-const nextConfig: NextConfig = {
-  // هنا ضع باقي إعداداتك (ترحيل الصور، صفحات 404...) دون i18n
+const locales = ['ar', 'en', 'fr'];
+const defaultLocale = 'ar';
+
+const intlMiddleware = createIntlMiddleware({
+  locales,
+  defaultLocale,
+  localePrefix: 'as-needed',
+  localeDetection: true
+});
+
+export default {
+  middleware: {
+    matcher: ['/', '/(ar|en|fr)/:path*']
+  },
+  experimental: {
+    serverActions: {
+      bodySizeLimit: '2mb' // أو يمكنك حذف هذا إن لم تستخدم serverActions
+    }
+  }
 };
-
-export default withNextIntl()(nextConfig);

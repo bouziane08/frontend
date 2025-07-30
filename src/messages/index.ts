@@ -1,3 +1,4 @@
+// src/messages/index.ts
 import ar from './ar';
 import en from './en';
 import fr from './fr';

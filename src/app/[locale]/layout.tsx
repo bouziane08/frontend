@@ -1,38 +1,34 @@
-import { ReactNode } from 'react';
-import { notFound } from 'next/navigation';
-import { locales } from '@/i18n/i18n';
+import { getMessages } from '@/i18n/getMessages';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
-
-type Props = {
-  children: ReactNode;
-  params: Promise<{ locale: string }>;
-};
+import { locales } from '@/i18n/i18n';
+import type { Metadata } from 'next';
+import  ThemeProvider  from '@/components/theme/ThemeProvider'; // إذا كنت تستخدمها
+import Layout from '@/components/layout/Layout'; // الهيدر والفوتر الموحد
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default async function LocaleLayout(props: Props) {
-  const params = await props.params;
+export const metadata: Metadata = {
+  title: 'My App',
+};
 
-  const {
-    children
-  } = props;
-
-  const { locale } = params;
-
-  if (!locales.includes(locale as any)) {
-    notFound();
-  }
-
-  const messages = await getMessages();
+export default async function LocaleLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  const messages = await getMessages(locale as any);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
       <body>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Layout>{children}</Layout>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

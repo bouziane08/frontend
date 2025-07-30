@@ -1,0 +1,21 @@
+export default {
+  title: 'Services Platform',
+  description: 'A multi-service platform for education, commerce, entertainment, jobs, and more.',
+  quickLinks: 'Quick Links',
+  sitemap: 'Sitemap',
+  newsletter: 'Newsletter',
+  emailPlaceholder: 'Enter your email',
+  subscribe: 'Subscribe',
+  backToTop: 'Back to top',
+  rights: '© {year} All rights reserved.',
+  links: {
+    education: 'Education',
+    commerce: 'Commerce',
+    entertainment: 'Entertainment',
+    jobs: 'Jobs',
+    about: 'About Us',
+    contact: 'Contact',
+    privacy: 'Privacy Policy',
+    faq: 'FAQ',
+  },
+};

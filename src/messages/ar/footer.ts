@@ -1,0 +1,21 @@
+export default {
+  title: 'منصة الخدمات',
+  description: 'منصة متعددة الخدمات تجمع التعليم، التجارة، الترفيه، الوظائف وغيرها.',
+  quickLinks: 'روابط سريعة',
+  sitemap: 'خريطة الموقع',
+  newsletter: 'النشرة البريدية',
+  emailPlaceholder: 'أدخل بريدك الإلكتروني',
+  subscribe: 'اشترك',
+  backToTop: 'العودة للأعلى',
+  rights: '© {year} جميع الحقوق محفوظة.',
+  links: {
+    education: 'التعليم',
+    commerce: 'التجارة',
+    entertainment: 'الترفيه',
+    jobs: 'الوظائف',
+    about: 'معلومات عنا',
+    contact: 'اتصل بنا',
+    privacy: 'سياسة الخصوصية',
+    faq: 'الأسئلة الشائعة',
+  },
+};

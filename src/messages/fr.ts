@@ -1,6 +1,7 @@
-export default {
-  home: {
-    title: "Bienvenue sur notre plateforme",
-    description: "Une plateforme numérique arabe à services multiples"
-  }
-} as const;
+// next.config.ts
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // لا يوجد i18n هنا إطلاقًا
+};
+
+export default nextConfig;

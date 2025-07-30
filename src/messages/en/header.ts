@@ -1,0 +1,16 @@
+export default {
+  home: 'Home',
+  education: 'Education',
+  commerce: 'Commerce',
+  blog: 'Blog',
+  community: 'Community',
+  chat: 'Chat',
+  dashboard: 'Admin',
+  searchPlaceholder: 'Search...',
+  notifications: 'Notifications',
+  profile: 'Profile',
+  settings: 'Settings',
+  logout: 'Logout',
+  login: 'Login',
+  brand: 'Chamo Bouzi',
+}

@@ -1,0 +1,16 @@
+export default {
+  home: 'الرئيسية',
+  education: 'التعليم',
+  commerce: 'التجارة',
+  blog: 'المدونة',
+  community: 'المجتمع',
+  chat: 'الدردشة',
+  dashboard: 'لوحة التحكم',
+  searchPlaceholder: 'ابحث...',
+  notifications: 'الإشعارات',
+  profile: 'الملف الشخصي',
+  settings: 'الإعدادات',
+  logout: 'تسجيل الخروج',
+  login: 'دخول',
+  brand: 'شامو بوزي',
+}
